@@ -1,5 +1,6 @@
 
 /** MAKE SURE TO READ THE README CAREFULLY BEFORE YOU BEGIN EDITING THIS CODE */
+// hi
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
@@ -13,7 +14,19 @@ public class Sketch extends PApplet {
      */
 
     Ball b1;
+    Ball b2;
+    Ball b3;
+    Ball b4;
+   
+    Bubble num1;
+    Bubble num2;
+    Bubble num3;
+    Bubble num4;
 
+    Snowflake s1;
+    Snowflake s2;
+    Snowflake s3;
+    Snowflake s4;
     public void settings() {
         size(500, 500);
     }
@@ -28,14 +41,52 @@ public class Sketch extends PApplet {
     public void setup() {
         frameRate(30);
         b1 = new Ball(this);
+        b2 = new Ball(this);
+        b3 = new Ball(this);
+        b4 = new Ball(this);
+        
+        num1 = new Bubble(this);
+        num2 = new Bubble(this);
+        num3 = new Bubble(this);
+        num4 = new Bubble(this);
+
+        s1 = new Snowflake(this);
+        s2 = new Snowflake(this);
+        s3 = new Snowflake(this);
+        s4 = new Snowflake(this);
     }
 
-    public void draw() {
+     public void draw() {
         background(100);
 
         /* SUMMATIVE REQUIRED Draw and move all balls, snowflakes, and bubbles */
         b1.drawBall();
         b1.moveBall();
+        b2.drawBall();
+        b2.moveBall();
+        b3.drawBall();
+        b3.moveBall();
+        b4.drawBall();
+        b4.moveBall();
+
+        num1.drawBubble();
+        num1.moveBubble();
+        num2.drawBubble();
+        num2.moveBubble();
+        num3.drawBubble();
+        num3.moveBubble();
+        num4.drawBubble();
+        num4.moveBubble();
+
+        s1.drawSnowflake();
+        s1.moveSnowflake();
+        s2.drawSnowflake();
+        s2.moveSnowflake();
+        s3.drawSnowflake();
+        s3.moveSnowflake();
+        s4.drawSnowflake();
+        s4.moveSnowflake();
+        
     }
 
     /**
@@ -62,6 +113,7 @@ public class Sketch extends PApplet {
      * stops? (this is a major challenge - you can use the variables mouseX and
      * mouseY to see where the mouse was clicked.)
      */
+  
 
     public static void main(String[] args) {
         PApplet.main("Sketch");
